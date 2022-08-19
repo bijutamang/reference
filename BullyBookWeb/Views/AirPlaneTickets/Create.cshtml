@@ -1,0 +1,27 @@
+﻿@model Tickets
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-3">
+            <h2>Book Tickets</h2>
+            <hr />
+        </div>
+
+        <div class="mb-4">
+            <label asp-for="CName">Passanger Name</label>
+            <input asp-for="CName" class="form-control" />
+            <span asp-validation-for="CName" class="text-danger"></span>
+        </div>
+        
+        <div class="mb-4">
+            <label asp-for="SetNumber">Set Number</label>
+            <input asp-for="SetNumber" class="form-control" />
+            <span asp-validation-for="SetNumber" class="text-danger"></span>
+        </div>
+        <button class="btn btn-primary" type="submit" style="width:150px">
+            Book Tickets
+        </button>
+        <a class="btn btn-secondary" asp-action="Index" asp-controller="AirPlaneTickets" style="width:150px">Back List</a>
+
+    </div>
+</form>

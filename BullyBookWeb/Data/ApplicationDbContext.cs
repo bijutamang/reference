@@ -1,0 +1,20 @@
+﻿
+using BullyBookWeb.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace BullyBookWeb.Data
+{
+    public class ApplicationDbContext :DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options): base (options)
+        {
+
+        }
+        public DbSet<Category> Categories { get; set; }
+
+        public DbSet<Tickets> Tickets { get; set; }
+
+        public DbSet<Member> Members { get; set; }
+
+    }
+}

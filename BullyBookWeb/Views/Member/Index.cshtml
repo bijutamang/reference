@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Member Section</h1>
+
+<table>
+    <thead>
+        <tr>
+            <td>
+                Member Name
+            </td>
+            
+            <td>
+                Gender
+            </td>
+            
+            <td>
+                Membership Date
+            </td>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var member in Model)
+        {
+            <tr>
+                <td>@member.Member_Name</td>
+                
+                <td>@member.Sex</td>
+                <td>@member.CreateDateTime</td>
+            </tr>
+        }
+    </tbody>
+</table>
